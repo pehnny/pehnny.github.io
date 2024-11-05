@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Symbols:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter";
+}
+
+body {
+    background: #FFFDFA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 343px;
+    height: 28px;
+    margin: 28px 16px 32px 16px;
+    & > section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & > .icon {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 40px;
+            height: 17px;
+            & > div {
+                width: 40px;
+                height: 3px;
+                background-color: #00001A;
+            }
+        }
+    }
+}
+
+main {
+    margin: 0px 16px;
+    width: 343px;
+    display: flex;
+    flex-direction: column;
+    & > section {
+        margin-bottom: 64px;
+    }
+    & > .headline {
+        display: grid;
+        /* width: 343px; */
+        height: 636px;
+        & > img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        & > h1 {
+            font-size: 40px;
+            font-weight: 800;
+            line-height: 40px;
+            text-align: left;
+        }
+        & > article > p {
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 26px;
+            text-align: left;
+            color: #5E607A;
+        }
+        & > button {
+            width: 185px;
+            height: 48px;
+            background-color: #F15D51;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 4.375px;
+            color: #FFFDFA;
+            border: 0;
+            padding: 0;
+            align-self: self-end;
+        }
+    }
+    & > .news {
+        /* width: 343px; */
+        height: 489px;
+        background-color: #00001A;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 24px 21px;
+        & > h1 {
+            color: #E9AA52;
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 32px;
+            text-align: left;
+        }
+        & > article {
+            height: 84px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            & > h2 {
+                color: #FFFDFA;
+                font-size: 20px;
+                font-weight: 800;
+                line-height: 24px;
+                text-align: left;
+            }
+            & > p {
+                color: #C5C6CE;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 26px;
+                text-align: left;
+            }
+        }  
+    }
+    & > .articles {
+        height: 451px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        & > article {
+            height: 129px;
+            display: flex;
+            justify-content: space-between;
+            & > img {
+                height: 100%;
+                width: 100px;
+                object-fit: cover;
+            }
+            & > summary {
+                width: 219px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                & > h1 {
+                    color: #C5C6CE;
+                    font-size: 32px;
+                    font-weight: 700;
+                    line-height: 32px;
+                    text-align: left;
+
+                }
+                & > h2 {
+                    color: #00001A;
+                    font-size: 18px;
+                    font-weight: 800;
+                    line-height: 24px;
+                    text-align: left;
+
+                }
+                & > p {
+                    color: #5E607A;
+                    font-size: 15px;
+                    font-weight: 400;
+                    line-height: 26px;
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (1440px <= width) {
+    
+}
