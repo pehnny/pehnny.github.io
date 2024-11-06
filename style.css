@@ -17,29 +17,35 @@ header {
     width: 343px;
     height: 28px;
     margin: 28px 16px 32px 16px;
+
     & > section {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
         & > svg {
             width: 45px;
             height: 28px;
         }
+
         & > .icon {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             width: 40px;
             height: 17px;
+
             & > div {
                 width: 40px;
                 height: 3px;
                 background-color: #00001A;
             }
         }
+
         & > .menu {
             display: none;
         }
+
         /* & > .icon:active {
             & + ul {
                 display: flex;
@@ -53,24 +59,29 @@ main {
     width: 343px;
     display: flex;
     flex-direction: column;
+
     & > section {
         margin-bottom: 64px;
     }
+
     & > .headline {
         display: grid;
         /* width: 343px; */
         height: 636px;
+
         & > img {
             width: 100%;
             height: 300px;
             object-fit: cover;
         }
+
         & > h1 {
             font-size: 40px;
             font-weight: 800;
             line-height: 40px;
             text-align: left;
         }
+
         & > article > p {
             font-size: 15px;
             font-weight: 400;
@@ -78,6 +89,7 @@ main {
             text-align: left;
             color: #5E607A;
         }
+
         & > button {
             width: 185px;
             height: 48px;
@@ -89,10 +101,11 @@ main {
             color: #FFFDFA;
             border: 0;
             padding: 0;
-            align-self: self-end;
+            align-self: end;
         }
     }
-    & > .news {
+
+    & > .new {
         /* width: 343px; */
         height: 489px;
         background-color: #00001A;
@@ -100,6 +113,7 @@ main {
         flex-direction: column;
         justify-content: space-between;
         padding: 24px 21px;
+
         & > h1 {
             color: #E9AA52;
             font-size: 32px;
@@ -107,11 +121,13 @@ main {
             line-height: 32px;
             text-align: left;
         }
+
         & > article {
             height: 84px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+
             & > h2 {
                 color: #FFFDFA;
                 font-size: 20px;
@@ -119,6 +135,7 @@ main {
                 line-height: 24px;
                 text-align: left;
             }
+
             & > p {
                 color: #C5C6CE;
                 font-size: 15px;
@@ -128,25 +145,30 @@ main {
             }
         }  
     }
+
     & > .articles {
         height: 451px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
         & > article {
             height: 129px;
             display: flex;
             justify-content: space-between;
+
             & > img {
                 height: 100%;
                 width: 100px;
                 object-fit: cover;
             }
+
             & > summary {
                 width: 219px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+
                 & > h1 {
                     color: #C5C6CE;
                     font-size: 32px;
@@ -155,6 +177,7 @@ main {
                     text-align: left;
 
                 }
+
                 & > h2 {
                     color: #00001A;
                     font-size: 18px;
@@ -163,6 +186,7 @@ main {
                     text-align: left;
 
                 }
+
                 & > p {
                     color: #5E607A;
                     font-size: 15px;
@@ -180,17 +204,21 @@ main {
         width: 1110px;
         height: 40px;
         margin: 72px 165px;
+
         & > section {
             display: flex;
             justify-content: space-between;
             align-items: center;
+
             & > svg {
                 width: 65px;
                 height: 40px;
             }
+
             & > .icon {
                 display: none;
             }
+
             & > .menu {
                 padding: 0;
                 list-style: none;
@@ -198,6 +226,7 @@ main {
                 height: 26px;
                 display: flex;
                 justify-content: space-between;
+
                 & > li {
                     font-family: "Inter";
                     font-size: 15px;
@@ -212,29 +241,81 @@ main {
 
     main {
         width: 1110px;
-        height: 511px;
+        height: fit-content;
         margin: 0px 165px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        column-gap: 30px;
-        grid-template-rows: repeat(3, 1fr);
+        /* grid-template-rows: fit-content(300px) fit-content(181px) fit-content(170px); */
+        gap: 30px;
+
+        & > section {
+            margin: 0;
+        }
+
         & > .headline {
+            height: fit-content;
             grid-column: 1/3;
-            grid-row: 1/2;
+            grid-row: 1;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            column-gap: 0;
-            grid-template-rows: repeat(2, 1fr);
+            grid-template-rows: 300px 181px;
+            gap: inherit;
+
+            & > img {
+                grid-column: 1/3;
+                grid-row: 1;
+                /* width: 100%;
+                height: 100%; */
+                object-position: top;
+            }
+
+            & > h1, & > article {
+                padding: 1px;
+            }
+
+            & > h1 {
+                grid-column: 1;
+                grid-row: 2;
+                font-size: 56px;
+                font-weight: 800;
+                line-height: 56px;
+                padding: auto;
+                align-self: center;
+            }
+
+            & > article {
+                grid-column: 2;
+                grid-row: 2;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 26px;
+                text-align: left;
+            }
+
+            & > button {
+                grid-column: 2;
+                grid-row: 2;
+            }
         }
-        & > .news{
+
+        & > .new {
+            height: 511px;
             grid-column: 3/4;
-            grid-row: 1/3;
+            grid-row: 1;
+
+            & > h1 {
+                font-size: 40px;
+            }
         }
+
         & > .articles {
+            height: 179px;
+            align-items: end;
             grid-column: 1/4;
-            grid-row: 3/4;
+            grid-row: 2;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
+            gap: inherit;
         }
     }
 }
